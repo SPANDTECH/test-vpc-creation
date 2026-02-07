@@ -32,7 +32,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
-      run: terraform plan -var="availability_zone=us-east-1a"
+      run: terraform plan -var="availability_zone=us-east-2"
 
     
 
@@ -42,4 +42,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
-        run: terraform apply -auto-approve -var="availability_zone=us-east-1a"
+        run: terraform apply -auto-approve -var="availability_zone=us-east-2"
